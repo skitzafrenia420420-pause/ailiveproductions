@@ -90,6 +90,26 @@ footer a{display:inline-flex;align-items:center;min-height:44px;min-width:44px;p
 nav ul a[aria-current=page]{color:var(--gold2);box-shadow:inset 0 -2px 0 var(--gold)}
 .page-hero{padding:64px 0 40px;border-bottom:1px solid var(--line)}.page-hero p{color:var(--muted);max-width:640px}
 .more{margin-top:24px}.card a.more{display:inline-flex;align-items:center;min-height:44px;color:var(--gold2);text-decoration:none;margin-top:6px}
+.carousel{position:relative}
+.rv-track{list-style:none;display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - 44px)/3);gap:22px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding:4px 2px 8px;scrollbar-width:none;overscroll-behavior-x:contain}
+.rv-track::-webkit-scrollbar{display:none}.rv-track:focus-visible{outline:2px solid var(--gold);outline-offset:4px;border-radius:16px}
+.rv-slide{scroll-snap-align:start;display:flex}
+.rv-card{flex:1;display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:28px}
+.rv-top{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:14px}
+.rv-stars{display:flex;gap:2px}.rv-stars svg{width:20px;height:20px;fill:var(--gold)}
+.rv-src{font-size:.8rem;color:var(--muted);border:1px solid var(--line);border-radius:20px;padding:2px 10px;white-space:nowrap}
+.rv-card blockquote{background:none;border:0;padding:0;font-size:1.05rem;line-height:1.6;color:var(--text);flex:1}
+.rv-card figcaption{margin-top:16px;font-family:Montserrat;font-weight:600;color:var(--head)}
+.rv-ctrl{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:20px}
+.rv-arrow{width:48px;height:48px;border-radius:50%;background:var(--card);border:1px solid var(--line);color:#fff;display:flex;align-items:center;justify-content:center}
+.rv-arrow:hover{border-color:var(--gold);color:var(--gold2)}.rv-arrow:disabled{opacity:.35;cursor:default}
+.rv-dots{display:flex}.rv-dot{width:44px;height:44px;background:none;display:flex;align-items:center;justify-content:center}
+.rv-dot span{width:10px;height:10px;border-radius:50%;background:#5a524a;transition:.2s}.rv-dot[aria-current=true] span{background:var(--gold);width:24px;border-radius:6px}
+.rv-arrow:focus-visible,.rv-dot:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.rv-all{text-align:center;margin-top:10px}.rv-all a{display:inline-flex;align-items:center;min-height:44px;color:var(--gold2);text-decoration:none;font-weight:500}
+@media(max-width:860px){.rv-track{grid-auto-columns:calc((100% - 22px)/2)}}
+@media(max-width:600px){.rv-track{grid-auto-columns:100%;gap:16px}.rv-ctrl{flex-wrap:wrap;gap:0 16px}.rv-dots{order:-1;flex-basis:100%;justify-content:center}}
+@media(prefers-reduced-motion:reduce){.rv-track{scroll-behavior:auto}}
 </style>
 </head>
 <body>
@@ -132,7 +152,36 @@ nav ul a[aria-current=page]{color:var(--gold2);box-shadow:inset 0 -2px 0 var(--g
 <div class="gallery" style="grid-template-columns:1fr;max-width:720px"><figure><img style="aspect-ratio:16/9" src="gallery/event-01.jpg" loading="lazy" alt="Ballroom set with round banquet tables, projection screens and colored stage lighting"><figcaption>Ballroom event: banquet setup with screens and stage lighting</figcaption></figure></div>
 <p class="more"><a href="services.html#gallery" style="color:var(--gold2)">See the full gallery →</a></p></div></section>
 <section class="alt"><div class="wrap"><p class="eyebrow">Reviews</p><h2>What clients say</h2>
-<div class="reviews"><blockquote>“I would absolutely hire this team again. They made sure every single thing at my party was perfect.”<cite>Tcg Vending Hub (Facebook review)</cite></blockquote></div></div></section>
+<section class="carousel" aria-roledescription="carousel" aria-label="Client reviews">
+<ul class="rv-track" id="rv-track" tabindex="0" aria-label="Reviews, scroll sideways"><li class="rv-slide" role="group" aria-roledescription="slide" aria-label="1 of 7"><figure class="rv-card">
+<div class="rv-top"><span class="rv-stars" role="img" aria-label="5 out of 5 stars"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg></span><span class="rv-src">Google review</span></div>
+<blockquote>“Their professionalism, attention to detail, and quick communication really stood out. Everything was executed smoothly and they made sure the event looked and felt top-tier.”</blockquote>
+<figcaption>Anaika Liberiste</figcaption></figure></li><li class="rv-slide" role="group" aria-roledescription="slide" aria-label="2 of 7"><figure class="rv-card">
+<div class="rv-top"><span class="rv-stars" role="img" aria-label="5 out of 5 stars"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg></span><span class="rv-src">Google review</span></div>
+<blockquote>“AI Live Productions exceeded every expectation. Their AV expertise, professionalism, and 24/7 responsiveness made our event seamless and unforgettable. From lighting to sound, every detail was dialed in with precision and care. Highly recommend for anyone serious about quality and vibe.”</blockquote>
+<figcaption>BeGreat Music</figcaption></figure></li><li class="rv-slide" role="group" aria-roledescription="slide" aria-label="3 of 7"><figure class="rv-card">
+<div class="rv-top"><span class="rv-stars" role="img" aria-label="5 out of 5 stars"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg></span><span class="rv-src">Google review</span></div>
+<blockquote>“Amazing service, I called and they were on point with their response time, they were very professional, Everything ran seamlessly, i highly recommend these professionals.”</blockquote>
+<figcaption>Michael Joseph</figcaption></figure></li><li class="rv-slide" role="group" aria-roledescription="slide" aria-label="4 of 7"><figure class="rv-card">
+<div class="rv-top"><span class="rv-stars" role="img" aria-label="5 out of 5 stars"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg></span><span class="rv-src">Google review</span></div>
+<blockquote>“Great service! Very professional and made our event look amazing.”</blockquote>
+<figcaption>Sean Oliver (OverSanic)</figcaption></figure></li><li class="rv-slide" role="group" aria-roledescription="slide" aria-label="5 of 7"><figure class="rv-card">
+<div class="rv-top"><span class="rv-stars" role="img" aria-label="5 out of 5 stars"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg></span><span class="rv-src">Google review</span></div>
+<blockquote>“Very professional, would definetly recommend”</blockquote>
+<figcaption>Ophise Joachim</figcaption></figure></li><li class="rv-slide" role="group" aria-roledescription="slide" aria-label="6 of 7"><figure class="rv-card">
+<div class="rv-top"><span class="rv-stars" role="img" aria-label="5 out of 5 stars"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg></span><span class="rv-src">Google review</span></div>
+<blockquote>“I like it”</blockquote>
+<figcaption>Cash Tekurio</figcaption></figure></li><li class="rv-slide" role="group" aria-roledescription="slide" aria-label="7 of 7"><figure class="rv-card">
+<div class="rv-top"><span class="rv-stars" role="img" aria-label="5 out of 5 stars"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg></span><span class="rv-src">Facebook review</span></div>
+<blockquote>“I would absolutely hire this team again. They made sure every single thing at my party was perfect.”</blockquote>
+<figcaption>Tcg Vending Hub</figcaption></figure></li></ul>
+<div class="rv-ctrl">
+<button class="rv-arrow" type="button" data-dir="-1" aria-label="Previous review" aria-controls="rv-track"><svg class="i"><path d="M15 5l-7 7 7 7"/></svg></button>
+<div class="rv-dots"><button class="rv-dot" type="button" aria-label="Go to review 1" data-i="0"><span></span></button><button class="rv-dot" type="button" aria-label="Go to review 2" data-i="1"><span></span></button><button class="rv-dot" type="button" aria-label="Go to review 3" data-i="2"><span></span></button><button class="rv-dot" type="button" aria-label="Go to review 4" data-i="3"><span></span></button><button class="rv-dot" type="button" aria-label="Go to review 5" data-i="4"><span></span></button><button class="rv-dot" type="button" aria-label="Go to review 6" data-i="5"><span></span></button><button class="rv-dot" type="button" aria-label="Go to review 7" data-i="6"><span></span></button></div>
+<button class="rv-arrow" type="button" data-dir="1" aria-label="Next review" aria-controls="rv-track"><svg class="i"><path d="M9 5l7 7-7 7"/></svg></button>
+</div>
+<p class="rv-all"><a href="https://www.google.com/maps/place/AI+Live+Productions/data=!4m2!3m1!1s0x2f2536a4d91bcf57:0xe79505daceb7d8ef" target="_blank" rel="noopener">See all reviews on Google →</a></p>
+</section></div></section>
 <section class="band"><div class="wrap"><h2>Ready to make your event unforgettable?</h2>
 <p>Tell us your date and we'll put together the right sound, lighting and video package.</p><div class="ctas"><a class="btn btn-gold" href="quote.html">Get a Quote</a><a class="btn btn-ghost" href="tel:+13054342948"><svg class="i"><use href="#i-phone"/></svg>Call (305) 434-2948</a></div></div></section>
 </main>
@@ -145,6 +194,15 @@ nav ul a[aria-current=page]{color:var(--gold2);box-shadow:inset 0 -2px 0 var(--g
 <script>
 var mb=document.querySelector('.menu-btn'),menu=document.getElementById('menu');
 mb.addEventListener('click',function(){var o=menu.classList.toggle('open');mb.setAttribute('aria-expanded',o)});
+(function(){var t=document.getElementById('rv-track');if(!t)return;var s=t.children,d=document.querySelectorAll('.rv-dot'),a=document.querySelectorAll('.rv-arrow');
+function per(){return Math.max(1,Math.round(t.clientWidth/s[0].getBoundingClientRect().width))}
+function cur(){return Math.round(t.scrollLeft/(s[1].offsetLeft-s[0].offsetLeft))}
+function go(i){i=Math.max(0,Math.min(s.length-per(),i));t.scrollTo({left:s[i].offsetLeft-s[0].offsetLeft})}
+function upd(){var c=cur(),p=per();d.forEach(function(b,i){var on=i>=c&&i<c+p;b.setAttribute('aria-current',on?'true':'false')});a[0].disabled=c<=0;a[1].disabled=c>=s.length-p}
+a.forEach(function(b){b.addEventListener('click',function(){go(cur()+ +b.dataset.dir)})});
+d.forEach(function(b){b.addEventListener('click',function(){go(+b.dataset.i)})});
+t.addEventListener('keydown',function(e){if(e.key==='ArrowRight'){e.preventDefault();go(cur()+1)}if(e.key==='ArrowLeft'){e.preventDefault();go(cur()-1)}});
+var r;t.addEventListener('scroll',function(){cancelAnimationFrame(r);r=requestAnimationFrame(upd)});addEventListener('resize',upd);upd()})();
 </script>
 </body>
 </html>
