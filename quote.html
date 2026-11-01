@@ -9,7 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#0d0b0a;--card:#181513;--line:#2e2924;--text:#f3efe8;--muted:#b5ada3;--head:#f7f2ea;--gold:#e0a84a;--gold2:#f0c070}
-*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth;scroll-padding-top:80px}
+*{box-sizing:border-box;margin:0;padding:0}html{overflow-y:scroll;scrollbar-gutter:stable;scroll-behavior:smooth;scroll-padding-top:80px}
 body{background:var(--bg);color:var(--text);font-family:Inter,sans-serif;line-height:1.6}
 a{color:inherit}h1,h2,h3{font-family:Montserrat,sans-serif;line-height:1.2;color:var(--head)}
 .wrap{max-width:1140px;margin:0 auto;padding:0 24px}
@@ -18,7 +18,7 @@ a{color:inherit}h1,h2,h3{font-family:Montserrat,sans-serif;line-height:1.2;color
 .btn-ghost{border:1px solid #cfc6ba;color:#fff}.btn-ghost:hover{background:#fff;color:#111}
 svg.i{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
 nav{position:sticky;top:0;z-index:20;background:rgba(13,11,10,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-nav .wrap{display:flex;align-items:center;justify-content:space-between;height:70px;gap:12px}
+nav{height:71px}nav .wrap{display:flex;align-items:center;justify-content:space-between;height:70px;gap:12px}
 nav .brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:Montserrat;font-weight:800}
 nav .brand img{height:46px;border-radius:50%;clip-path:circle(41% at 50% 50%)}
 nav ul{display:flex;gap:6px;list-style:none}
@@ -87,7 +87,7 @@ footer a{display:inline-flex;align-items:center;min-height:44px;min-width:44px;p
  body{padding-bottom:72px}
 }
 @media(max-width:520px){.grid,.gallery{grid-template-columns:1fr}nav .brand span{display:none}form{grid-template-columns:1fr}.hero .ctas .btn{flex:1 1 100%}}
-nav ul a[aria-current=page]{color:var(--gold2);font-weight:600;box-shadow:inset 0 -2px 0 var(--gold)}
+nav ul a[aria-current=page]{color:var(--gold2);box-shadow:inset 0 -2px 0 var(--gold)}
 .page-hero{padding:64px 0 40px;border-bottom:1px solid var(--line)}.page-hero p{color:var(--muted);max-width:640px}
 .more{margin-top:24px}.card a.more{display:inline-flex;align-items:center;min-height:44px;color:var(--gold2);text-decoration:none;margin-top:6px}
 </style>
@@ -108,7 +108,7 @@ nav ul a[aria-current=page]{color:var(--gold2);font-weight:600;box-shadow:inset 
 <nav aria-label="Main"><div class="wrap">
 <a class="brand" href="index.html"><img src="logo.png" alt="AI Live Productions logo"><span>AI Live Productions</span></a>
 <ul id="menu"><li><a href="index.html">Home</a></li><li><a href="services.html">Services &amp; Events</a></li><li><a href="about.html">About</a></li><li><a href="quote.html" aria-current="page">Get a Quote</a></li></ul>
-
+<a class="btn btn-gold navcta" href="quote.html">Get a Quote</a>
 <button class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><svg class="i"><use href="#i-menu"/></svg></button>
 </div></nav>
 <main>
