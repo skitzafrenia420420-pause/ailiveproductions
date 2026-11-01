@@ -30,7 +30,7 @@ nav ul a{text-decoration:none;color:var(--muted);font-size:.95rem}nav ul a:hover
 nav .btn{padding:10px 20px}
 section{padding:90px 0}.eyebrow{text-transform:uppercase;letter-spacing:.2em;font-size:.8rem;color:var(--muted);margin-bottom:10px}
 h2{font-size:2.2rem;margin-bottom:18px}
-.hero{text-align:center;padding:80px 0 100px;background:radial-gradient(ellipse at top,#2a2a33 0%,var(--bg) 65%)}
+.hero{text-align:center;padding:80px 0 100px;background:linear-gradient(rgba(11,11,13,.82),rgba(11,11,13,.95)),url(gallery/user-03.jpg) center/cover}
 .hero img{width:min(320px,70vw);filter:drop-shadow(0 10px 40px rgba(255,255,255,.12))}
 .hero h1{font-size:clamp(2rem,5vw,3.4rem);margin:20px 0 14px}.hero p{color:var(--muted);font-size:1.2rem;max-width:620px;margin:0 auto 32px}
 .ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
@@ -50,7 +50,7 @@ h2{font-size:2.2rem;margin-bottom:18px}
 background:radial-gradient(circle at 20% 0%,rgba(170,120,255,.45),transparent 45%),radial-gradient(circle at 80% 10%,rgba(90,160,255,.35),transparent 45%),linear-gradient(#15151a,#060608)}
 .tile:nth-child(2n){background:radial-gradient(circle at 50% 0%,rgba(255,255,255,.35),transparent 50%),linear-gradient(#18181d,#060608)}
 .tile:nth-child(3n){background:radial-gradient(circle at 30% 0%,rgba(255,90,180,.35),transparent 45%),radial-gradient(circle at 75% 0%,rgba(255,200,90,.25),transparent 45%),linear-gradient(#15151a,#060608)}
-.gallery img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:14px;border:1px solid var(--line)}
+.gallery img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:14px;border:1px solid var(--line)}
 .reviews{display:grid;grid-template-columns:1fr 1fr;gap:22px}
 blockquote{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:32px;font-size:1.15rem}
 blockquote cite{display:block;margin-top:14px;color:var(--muted);font-style:normal;font-size:.9rem}
@@ -107,8 +107,9 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 <section id="gallery"><div class="wrap">
 <p class="eyebrow">Gallery</p><h2>Featured work</h2>
 <div class="gallery">
-<div class="tile">Event photos coming soon</div><div class="tile">Event photos coming soon</div><div class="tile">Event photos coming soon</div>
-<div class="tile">Event photos coming soon</div><div class="tile">Event photos coming soon</div><div class="tile">Event photos coming soon</div>
+<img src="gallery/user-01.jpg" loading="lazy" alt="Ballroom set up for a banquet by AI Live Productions">
+<img src="gallery/user-02.jpg" loading="lazy" alt="Camera on tripod filming a ballroom stage event">
+<img src="gallery/user-03.jpg" loading="lazy" alt="Digital mixing console running a live band on stage">
 </div>
 </div></section>
 
