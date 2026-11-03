@@ -129,7 +129,7 @@ a[href^="tel:"]{white-space:nowrap}
 </ul>
 </div>
 <div>
-<!-- Sends via Web3Forms (api.web3forms.com). Replace WEB3FORMS_KEY_HERE in the script below with the real access key. -->
+<!-- Sends via Web3Forms (api.web3forms.com). Replace 38eada0e-b1fa-4dc6-8633-123b345c473b in the script below with the real access key. -->
 <form id="quote" novalidate>
 <label class="full">Name <b>*</b><input name="name" autocomplete="name" required></label>
 <label>Email <b>*</b><input name="email" type="email" autocomplete="email" required></label>
@@ -156,7 +156,7 @@ a[href^="tel:"]{white-space:nowrap}
 var mb=document.querySelector('.menu-btn'),menu=document.getElementById('menu');
 mb.addEventListener('click',function(){var o=menu.classList.toggle('open');mb.setAttribute('aria-expanded',o)});
 var FORM_ENDPOINT='https://api.web3forms.com/submit';
-var WEB3FORMS_KEY='WEB3FORMS_KEY_HERE';
+var WEB3FORMS_KEY='38eada0e-b1fa-4dc6-8633-123b345c473b';
 var f0=document.getElementById('quote'),qt=new URLSearchParams(location.search).get('type');
 if(qt){for(var o of f0.type.options){if(o.text===qt){f0.type.value=qt}}}
 f0.addEventListener('submit',function(e){e.preventDefault();var f=this;
