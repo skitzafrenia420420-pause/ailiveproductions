@@ -10,7 +10,7 @@
 <link rel="icon" href="favicon.png">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#0A0A0A;--card:#161616;--line:#2E2E2E;--text:#F2F2F2;--muted:#B4B4B4;--head:#FFFFFF;--gold:#D9D9D9;--gold2:#F2F2F2}
+:root{--bg:#0A0A0A;--card:#161616;--line:#2E2E2E;--text:#F2F2F2;--muted:#DDD6D0;--head:#FFFFFF;--gold:#D9D9D9;--gold2:#F2F2F2}
 *{box-sizing:border-box;margin:0;padding:0}html{overflow-y:scroll;scrollbar-gutter:stable;scroll-behavior:smooth;scroll-padding-top:80px}
 body{background:var(--bg);color:var(--text);font-family:Inter,sans-serif;line-height:1.6}
 a{color:inherit}h1,h2,h3{font-family:Montserrat,sans-serif;line-height:1.2;color:var(--head)}
@@ -29,7 +29,7 @@ nav .btn{padding:10px 20px}
 .menu-btn{display:none;background:none;border:1px solid var(--line);color:#fff;border-radius:10px;width:48px;height:48px;align-items:center;justify-content:center}
 section{padding:90px 0}.eyebrow{text-transform:uppercase;letter-spacing:.2em;font-size:.8rem;color:var(--gold);margin-bottom:10px;font-weight:600}
 h2{font-size:2.2rem;margin-bottom:18px}
-.hero{padding:110px 0 120px;background:linear-gradient(90deg,rgba(10,10,10,.92) 0%,rgba(10,10,10,.7) 55%,rgba(10,10,10,.35)),url(gallery/event-01.jpg) center/cover}
+.hero{padding:110px 0 120px;background:linear-gradient(90deg,rgba(10,10,10,.76) 0%,rgba(10,10,10,.48) 55%,rgba(10,10,10,.16)),url(gallery/event-01.jpg) center/cover}
 .hero .badge{width:96px;border-radius:50%;clip-path:circle(41% at 50% 50%)}
 .hero h1{font-size:clamp(2rem,5vw,3.4rem);margin:18px 0 14px;max-width:760px}
 .hero p{color:#DADADA;font-size:1.2rem;max-width:620px;margin:0 0 30px}
@@ -83,7 +83,7 @@ footer a{display:inline-flex;align-items:center;min-height:44px;min-width:44px;p
  nav ul.open{display:flex}nav ul a{min-height:52px;font-size:1.05rem;color:#fff;border-bottom:1px solid var(--line)}
  .menu-btn{display:inline-flex}nav .navcta{display:none}
  .about,.contact,.reviews{grid-template-columns:1fr}.grid,.gallery{grid-template-columns:1fr 1fr}.types{grid-template-columns:1fr 1fr}section{padding:64px 0}
- .hero{padding:56px 0 64px;background:linear-gradient(rgba(10,10,10,.55),rgba(10,10,10,.92)),url(gallery/event-01.jpg) center/cover}
+ .hero{padding:56px 0 64px;background:linear-gradient(rgba(10,10,10,.38),rgba(10,10,10,.70)),url(gallery/event-01.jpg) center/cover}
  .hero .badge{width:64px}
  .sticky{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:30;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(10,10,10,.96);border-top:1px solid var(--line)}
  .sticky .btn{flex:1;padding:12px 10px}
@@ -100,7 +100,7 @@ nav .navcta{background:linear-gradient(180deg,#F8C2A4 0%,#F2A07B 52%,#E08A62 100
 .gc{position:relative}
 .gc-track{list-style:none;margin:0;display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - 44px)/3);gap:22px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding:4px 2px 8px;scrollbar-width:none;overscroll-behavior-x:contain}
 .gc-track::-webkit-scrollbar{display:none}.gc-track:focus-visible{outline:2px solid var(--gold);outline-offset:4px;border-radius:16px}
-.gc-slide{scroll-snap-align:start;margin:0}.gc-slide img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:14px;border:1px solid var(--line);display:block;background:#151515}
+.gc-slide{scroll-snap-align:start;margin:0}.gc-slide img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:14px;border:1px solid var(--line);display:block;background:#151515}.gc-slide img[src="gallery/event-01.jpg"]{filter:brightness(1.10) contrast(1.04)}.gc-slide img[src="gallery/event-02.jpg"]{filter:brightness(1.22) contrast(1.06)}.gc-slide img[src="gallery/event-03.jpg"]{filter:brightness(1.16) contrast(1.06)}.gc-slide img[src="gallery/event-05.jpg"]{filter:brightness(1.12) contrast(1.04)}.gc-slide img[src="gallery/event-06.jpg"]{filter:brightness(1.28) contrast(1.08)}.gc-slide img[src="gallery/event-08.jpg"]{filter:brightness(1.18) contrast(1.05)}
 .gc-slide figcaption{color:var(--muted);font-size:.9rem;margin-top:8px}
 .gc-ctrl{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:20px}
 .gc-arrow{width:48px;height:48px;border-radius:50%;background:var(--card);border:1px solid var(--line);color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer}
